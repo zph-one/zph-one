@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单调查问卷</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .survey-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto 0;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4fc;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <h1>简单调查问卷</h1>
+        <p>感谢您参与我们的调查！本问卷包含3个问题，大约需要1分钟时间。</p>
+        
+        <form id="surveyForm">
+            <div class="question">
+                <label for="q1">1. 您对当前服务的满意度如何？</label>
+                <select id="q1" required>
+                    <option value="" disabled selected>请选择...</option>
+                    <option value="非常满意">非常满意</option>
+                    <option value="满意">满意</option>
+                    <option value="一般">一般</option>
+                    <option value="不满意">不满意</option>
+                    <option value="非常不满意">非常不满意</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="q2">2. 您最喜欢我们产品的哪个功能？</label>
+                <input type="text" id="q2" placeholder="请输入您最喜欢的..." required>
+            </div>
+            
+            <div class="question">
+                <label for="q3">3. 您有什么改进建议？</label>
+                <textarea id="q3" rows="4" placeholder="请分享您的宝贵建议..."></textarea>
+            </div>
+            
+            <button type="submit">提交问卷</button>
+        </form>
+        
+        <div id="result">
+            <h2>感谢您的参与！</h2>
+            <p>您的反馈对我们非常重要。</p>
+            <div id="answers"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 收集答案
+            const answers = {
+                q1: document.getElementById('q1').value,
+                q2: document.getElementById('q2').value,
+                q3: document.getElementById('q3').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            // 显示结果
+            document.getElementById('surveyForm').style.display = 'none';
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            
+            // 显示答案摘要
+            document.getElementById('answers').innerHTML = `
+                <p><strong>满意度：</strong> ${answers.q1}</p>
+                <p><strong>最喜欢的功能：</strong> ${answers.q2}</p>
+                <p><strong>改进建议：</strong> ${answers.q3 || '无'}</p>
+                <p><strong>提交时间：</strong> ${answers.timestamp}</p>
+            `;
+            
+            // 在实际应用中，这里可以添加代码将答案发送到服务器
+            console.log('问卷答案:', answers);
+        });
+    </script>
+</body>
+</html>
