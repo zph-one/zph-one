@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理财与理赔服务说明</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #1677ff;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1677ff;
+            margin-top: 25px;
+        }
+        h3 {
+            color: #333;
+        }
+        .badge {
+            background-color: #f0f7ff;
+            color: #1677ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .feature-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #1677ff;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .step {
+            flex: 1;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background-color: #1677ff;
+            z-index: -1;
+        }
+        .current-step {
+            font-weight: bold;
+            color: #1677ff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .checkbox-item {
+            margin: 5px 0;
+        }
+        .agree-btn {
+            background-color: #1677ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+        .link {
+            color: #1677ff;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>理财与理赔服务说明</h1>
+
+    <section>
+        <h2>产品认证与服务</h2>
+        <p><span class="badge">安心赔优秀认证</span>本产品已入选安心赔计划</p>
+        <ul>
+            <li><strong>服务水平</strong>：4项服务指标达到A级标准</li>
+            <li><strong>服务能力</strong>：享两日快赔等12项安心赔服务</li>
+        </ul>
+
+        <div class="feature-box">
+            <h3>特色服务</h3>
+            <p><strong>优先理赔</strong>：住院即申请，全程协助，获赔更快</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>理赔流程</h2>
+        <div class="process-steps">
+            <div class="step current-step">1. 提交申请</div>
+            <div class="step">2. 材料初审<br><small>约2工作日</small></div>
+            <div class="step">3. 理赔审核<br><small>约2工作日</small></div>
+            <div class="step">4. 赔付打款<br><small>约1工作日</small></div>
+        </div>
+
+        <p><input type="checkbox" checked> <strong>安心赔·理赔向导</strong>：若审核超时，可申请加急催办</p>
+    </section>
+
+    <section>
+        <h2>理赔范围</h2>
+        <p><strong>可赔费用</strong></p>
+        <div class="checkbox-item">
+            <input type="checkbox" id="cost1"> <label for="cost1">住院医疗费</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="cost2"> <label for="cost2">住院前后30天门急诊医疗费（含出入院当天）</label>
+        </div>
+        <p><strong>其他要求</strong>：保障疾病、医院范围、时间要求</p>
+        <p><a href="#" class="link">了解理赔范围</a></p>
+    </section>
+
+    <section>
+        <h2>准备材料</h2>
+        <h3>必备材料</h3>
+        <div class="checkbox-item">
+            <input type="checkbox" id="material1"> <label for="material1">医疗证明材料（如出院小结、医疗发票）</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="material2"> <label for="material2">其他特殊材料（如意外事故证明、医保结算单）</label>
+        </div>
+
+        <h3>材料档案</h3>
+        <p><strong>功能</strong>：帮助确认现有材料是否齐全</p>
+        <p><a href="#" class="link">了解详情</a></p>
+    </section>
+
+    <section>
+        <h2>理赔常见问题</h2>
+        <table>
+            <tr>
+                <th>易错点</th>
+                <th>正确规则</th>
+            </tr>
+            <tr>
+                <td>医疗险全额赔付？</td>
+                <td>一般疾病有1万元免赔额（自费部分≤1万不赔付）</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>协议与申请</h2>
+        <p>需同意以下协议：</p>
+        <ul>
+            <li><a href="#" class="link">保险代理平台服务协议</a></li>
+            <li><a href="#" class="link">电子票据授权协议</a></li>
+            <li><a href="#" class="link">数据直连协议</a></li>
+        </ul>
+
+        <button class="agree-btn">同意协议并申请</button>
+    </section>
+</body>
+</html>
