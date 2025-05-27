@@ -1,4 +1,4 @@
-fetch("https://c4.yonyoucloud.com/iuap-yonbuilder-designer/ucf-wh/builder/nocode/index.html?appId=2276643142883606538&pageId=2276643254552756240&locale=zh_CN&refimestamp=1,748,306,881#/nocode/page/dataManage")
+fetch("https://c4.yonyoucloud.com/mdf-node/fragment/PND6MEF6ST5AAACList?domainKey=developplatform&busiObj=PND6MEF6ST5AAAC&terminalType=1&serviceCode=025042491d6847458aa994c171f60fe3&feV=6")
   .then(response => response.json())
   .then(data => {
     console.log("API返回数据:", data);
