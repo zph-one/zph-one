@@ -3,186 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>理财与理赔服务说明</title>
+    <title>保险代理平台协议文档</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
+            background-color: #f5f7fa;
         }
-        h1 {
-            color: #1677ff;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #1677ff;
-            margin-top: 25px;
-        }
-        h3 {
-            color: #333;
-        }
-        .badge {
-            background-color: #f0f7ff;
-            color: #1677ff;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            font-weight: bold;
-            display: inline-block;
-            margin-right: 5px;
-        }
-        .feature-box {
-            background-color: #f8f8f8;
-            border-left: 4px solid #1677ff;
-            padding: 10px 15px;
-            margin: 15px 0;
-        }
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
+        .header {
             text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e1e4e8;
         }
-        .step {
+        .header h1 {
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+        .protocol-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .protocol {
             flex: 1;
-            position: relative;
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 20px;
         }
-        .step:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            right: -50%;
-            width: 100%;
-            height: 2px;
-            background-color: #1677ff;
-            z-index: -1;
+        .protocol h2 {
+            color: #2c5282;
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 10px;
+            margin-top: 0;
         }
-        .current-step {
-            font-weight: bold;
-            color: #1677ff;
+        .protocol h3 {
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
-        table {
+        .protocol ul, .protocol ol {
+            padding-left: 20px;
+        }
+        .protocol li {
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #cbd5e0;
+        }
+        @media (max-width: 768px) {
+            .protocol {
+                min-width: 100%;
+            }
+        }
+        .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
+            margin: 30px 0;
         }
-        th, td {
+        .comparison-table th, .comparison-table td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
         }
-        th {
+        .comparison-table th {
             background-color: #f2f2f2;
+            color: #333;
         }
-        .checkbox-item {
-            margin: 5px 0;
-        }
-        .agree-btn {
-            background-color: #1677ff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: block;
-            width: 100%;
-        }
-        .link {
-            color: #1677ff;
-            text-decoration: none;
-        }
-        .link:hover {
-            text-decoration: underline;
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <h1>理财与理赔服务说明</h1>
+    <div class="header">
+        <h1>保险代理平台协议文档</h1>
+        <p>生效日期：2024年03月01日 | 版本号：V1.0</p>
+    </div>
 
-    <section>
-        <h2>产品认证与服务</h2>
-        <p><span class="badge">安心赔优秀认证</span>本产品已入选安心赔计划</p>
-        <ul>
-            <li><strong>服务水平</strong>：4项服务指标达到A级标准</li>
-            <li><strong>服务能力</strong>：享两日快赔等12项安心赔服务</li>
-        </ul>
+    <div class="protocol-container">
+        <div class="protocol">
+            <h2>保险代理平台服务协议</h2>
+            
+            <h3>第一条 协议主体</h3>
+            <p>本协议由以下双方签署：</p>
+            <ol>
+                <li>新道保险代理有限公司（以下简称"平台方"）</li>
+                <li>平台用户（以下简称"用户"）</li>
+            </ol>
 
-        <div class="feature-box">
-            <h3>特色服务</h3>
-            <p><strong>优先理赔</strong>：住院即申请，全程协助，获赔更快</p>
+            <h3>第二条 服务内容</h3>
+            <ol>
+                <li>平台方为用户提供保险产品展示、购买、理赔等服务</li>
+                <li>提供7*24小时在线客服咨询</li>
+                <li>提供理赔进度查询等增值服务</li>
+            </ol>
+
+            <h3>第三条 用户权利与义务</h3>
+            <ol>
+                <li>用户应如实提供个人信息</li>
+                <li>遵守平台各项规则</li>
+                <li>保护个人账户安全</li>
+            </ol>
+
+            <h3>第四条 平台权利与义务</h3>
+            <ol>
+                <li>保护用户个人信息安全</li>
+                <li>提供稳定的平台服务</li>
+                <li>及时处理用户投诉</li>
+            </ol>
+
+            <h3>第五条 隐私保护</h3>
+            <ol>
+                <li>平台承诺对用户信息严格保密</li>
+                <li>未经用户同意不向第三方提供用户信息</li>
+                <li>采用行业标准的安全技术</li>
+            </ol>
+
+            <h3>第六条 免责条款</h3>
+            <ol>
+                <li>因不可抗力导致的服务中断</li>
+                <li>系统维护或升级造成的暂时性服务中断</li>
+                <li>用户自身原因导致的损失</li>
+            </ol>
+
+            <h3>第七条 协议生效与终止</h3>
+            <ol>
+                <li>用户确认并同意本协议即生效</li>
+                <li>协议终止的条件和程序</li>
+            </ol>
+
+            <h3>第八条 争议解决</h3>
+            <ol>
+                <li>双方应友好协商解决</li>
+                <li>协商不成可提请仲裁或诉讼</li>
+            </ol>
+
+            <h3>第九条 其他</h3>
+            <ol>
+                <li>本协议解释权归平台方所有</li>
+                <li>协议更新将以公告形式通知</li>
+            </ol>
+
+            <div class="meta-info">
+                <p><strong>生效日期</strong>：2024年03月01日</p>
+                <p><strong>版本号</strong>：V1.0</p>
+            </div>
         </div>
-    </section>
 
-    <section>
-        <h2>理赔流程</h2>
-        <div class="process-steps">
-            <div class="step current-step">1. 提交申请</div>
-            <div class="step">2. 材料初审<br><small>约2工作日</small></div>
-            <div class="step">3. 理赔审核<br><small>约2工作日</small></div>
-            <div class="step">4. 赔付打款<br><small>约1工作日</small></div>
+        <div class="protocol">
+            <h2>电子票据授权协议</h2>
+            
+            <h3>第一条 授权主体</h3>
+            <p>本协议授权主体为：</p>
+            <ol>
+                <li>授权人：平台用户</li>
+                <li>被授权人：新道保险代理有限公司</li>
+            </ol>
+
+            <h3>第二条 授权内容</h3>
+            <ol>
+                <li>电子票据的获取与使用</li>
+                <li>票据信息的存储与处理</li>
+                <li>票据数据的分析与应用</li>
+            </ol>
+
+            <h3>第三条 授权范围</h3>
+            <ol>
+                <li>医疗费用票据</li>
+                <li>处方信息</li>
+                <li>检查检验报告</li>
+                <li>其他相关医疗票据</li>
+            </ol>
+
+            <h3>第四条 授权用途</h3>
+            <ol>
+                <li>理赔审核</li>
+                <li>费用核算</li>
+                <li>数据统计</li>
+                <li>服务改进</li>
+            </ol>
+
+            <h3>第五条 信息安全</h3>
+            <ol>
+                <li>票据信息加密存储</li>
+                <li>严格访问权限控制</li>
+                <li>定期安全审计</li>
+            </ol>
+
+            <h3>第六条 授权期限</h3>
+            <ol>
+                <li>自用户同意之日起生效</li>
+                <li>至理赔服务完成后自动终止</li>
+                <li>用户可随时撤销授权</li>
+            </ol>
+
+            <h3>第七条 用户权益</h3>
+            <ol>
+                <li>查询权</li>
+                <li>更正权</li>
+                <li>撤销权</li>
+                <li>投诉权</li>
+            </ol>
+
+            <h3>第八条 免责条款</h3>
+            <ol>
+                <li>因用户提供信息不实导致的损失</li>
+                <li>因不可抗力导致的信息泄露</li>
+                <li>其他免责情形</li>
+            </ol>
+
+            <h3>第九条 其他</h3>
+            <ol>
+                <li>本协议解释权归被授权人所有</li>
+                <li>未尽事宜双方协商解决</li>
+            </ol>
+
+            <div class="meta-info">
+                <p><strong>生效日期</strong>：2024年03月01日</p>
+                <p><strong>版本号</strong>：V1.0</p>
+            </div>
         </div>
 
-        <p><input type="checkbox" checked> <strong>安心赔·理赔向导</strong>：若审核超时，可申请加急催办</p>
-    </section>
+        <div class="protocol">
+            <h2>数据直连协议</h2>
+            
+            <h3>第一条 协议方</h3>
+            <p>本协议签署方包括：</p>
+            <ol>
+                <li>新道保险代理有限公司（以下简称"平台"）</li>
+                <li>医疗机构（以下简称"医院"）</li>
+                <li>用户</li>
+            </ol>
 
-    <section>
-        <h2>理赔范围</h2>
-        <p><strong>可赔费用</strong></p>
-        <div class="checkbox-item">
-            <input type="checkbox" id="cost1"> <label for="cost1">住院医疗费</label>
+            <h3>第二条 服务定义</h3>
+            <ol>
+                <li>数据直连服务是指通过电子化手段</li>
+                <li>实现医疗数据的实时传输</li>
+                <li>用于保险理赔等服务</li>
+            </ol>
+
+            <h3>第三条 数据范围</h3>
+            <ol>
+                <li>就诊信息</li>
+                <li>诊断结果</li>
+                <li>处方信息</li>
+                <li>检查报告</li>
+                <li>医疗费用</li>
+                <li>其他相关医疗数据</li>
+            </ol>
+
+            <h3>第四条 数据使用</h3>
+            <ol>
+                <li>理赔审核</li>
+                <li>医疗费用核算</li>
+                <li>服务质量改进</li>
+                <li>用户体验优化</li>
+            </ol>
+
+            <h3>第五条 数据安全</h3>
+            <ol>
+                <li>传输加密
+                    <ul>
+                        <li>采用SSL/TLS加密传输</li>
+                        <li>端到端加密</li>
+                    </ul>
+                </li>
+                <li>存储安全
+                    <ul>
+                        <li>数据分级存储</li>
+                        <li>多重备份</li>
+                    </ul>
+                </li>
+                <li>访问控制
+                    <ul>
+                        <li>严格的权限管理</li>
+                        <li>操作日志记录</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>第六条 各方职责</h3>
+            <h4>平台职责</h4>
+            <ol>
+                <li>确保系统安全</li>
+                <li>保护数据隐私</li>
+                <li>提供技术支持</li>
+            </ol>
+
+            <h4>医院职责</h4>
+            <ol>
+                <li>及时传输数据</li>
+                <li>确保数据真实性</li>
+                <li>配合系统对接</li>
+            </ol>
+
+            <h4>用户责任</h4>
+            <ol>
+                <li>授权数据传输</li>
+                <li>保护账户安全</li>
+                <li>遵守使用规则</li>
+            </ol>
+
+            <h3>第七条 服务费用</h3>
+            <ol>
+                <li>基础服务费用</li>
+                <li>增值服务费用</li>
+                <li>费用调整机制</li>
+            </ol>
+
+            <h3>第八条 免责条款</h3>
+            <ol>
+                <li>因技术原因导致的服务中断</li>
+                <li>因不可抗力导致的数据延迟</li>
+                <li>其他免责情形</li>
+            </ol>
+
+            <h3>第九条 协议期限</h3>
+            <ol>
+                <li>生效条件</li>
+                <li>终止条件</li>
+                <li>续约机制</li>
+            </ol>
+
+            <h3>第十条 其他</h3>
+            <ol>
+                <li>协议修改</li>
+                <li>争议解决</li>
+                <li>补充条款</li>
+            </ol>
+
+            <div class="meta-info">
+                <p><strong>生效日期</strong>：2024年03月01日</p>
+                <p><strong>版本号</strong>：V1.0</p>
+            </div>
         </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="cost2"> <label for="cost2">住院前后30天门急诊医疗费（含出入院当天）</label>
-        </div>
-        <p><strong>其他要求</strong>：保障疾病、医院范围、时间要求</p>
-        <p><a href="#" class="link">了解理赔范围</a></p>
-    </section>
+    </div>
 
-    <section>
-        <h2>准备材料</h2>
-        <h3>必备材料</h3>
-        <div class="checkbox-item">
-            <input type="checkbox" id="material1"> <label for="material1">医疗证明材料（如出院小结、医疗发票）</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="material2"> <label for="material2">其他特殊材料（如意外事故证明、医保结算单）</label>
-        </div>
-
-        <h3>材料档案</h3>
-        <p><strong>功能</strong>：帮助确认现有材料是否齐全</p>
-        <p><a href="#" class="link">了解详情</a></p>
-    </section>
-
-    <section>
-        <h2>理赔常见问题</h2>
-        <table>
-            <tr>
-                <th>易错点</th>
-                <th>正确规则</th>
-            </tr>
-            <tr>
-                <td>医疗险全额赔付？</td>
-                <td>一般疾病有1万元免赔额（自费部分≤1万不赔付）</td>
-            </tr>
-        </table>
-    </section>
-
-    <section>
-        <h2>协议与申请</h2>
-        <p>需同意以下协议：</p>
-        <ul>
-            <li><a href="#" class="link">保险代理平台服务协议</a></li>
-            <li><a href="#" class="link">电子票据授权协议</a></li>
-            <li><a href="#" class="link">数据直连协议</a></li>
-        </ul>
-
-        <button class="agree-btn">同意协议并申请</button>
-    </section>
+    <h2 style="margin-top: 40px; color: #2c5282;">协议关键条款对比</h2>
+    <table class="comparison-table">
+        <tr>
+            <th>对比项</th>
+            <th>保险代理平台服务协议</th>
+            <th>电子票据授权协议</th>
+            <th>数据直连协议</th>
+        </tr>
+        <tr>
+            <td>协议主体</td>
+            <td>平台方与用户</td>
+            <td>授权人与被授权人</td>
+            <td>平台、医院与用户三方</td>
+        </tr>
+        <tr>
+            <td>核心内容</td>
+            <td>基础服务条款</td>
+            <td>电子票据授权</td>
+            <td>医疗数据直连</td>
+        </tr>
+        <tr>
+            <td>数据安全</td>
+            <td>基本隐私保护</td>
+            <td>票据信息加密</td>
+            <td>端到端加密传输</td>
+        </tr>
+        <tr>
+            <td>用户权利</td>
+            <td>基本权利与义务</td>
+            <td>查询、更正、撤销权</td>
+            <td>数据授权与控制权</td>
+        </tr>
+        <tr>
+            <td>终止条件</td>
+            <td>协议终止条件</td>
+            <td>理赔完成或用户撤销</td>
+            <td>协议约定的终止条件</td>
+        </tr>
+    </table>
 </body>
 </html>
